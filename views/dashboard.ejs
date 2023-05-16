@@ -1,14 +1,13 @@
-<%- include('partials/_header') %>
+<%- include('partials/_header') %> <%- include('partials/_nav') %>
 
-<!-- Start header -->
-<%- include('partials/_nav') %>
+<!-- User controls -->
 
-<!-- End header -->
+<% if(user){ %>
 
 <div class="all-title-box">
   <div class="container text-center">
     <h1>
-      Course Single<span class="m_1"
+      <%= user.name %><span class="m_1"
         >Lorem Ipsum dolroin gravida nibh vel velit.</span
       >
     </h1>
@@ -131,6 +130,8 @@
   </div>
   <!-- end container -->
 </div>
+<!-- end section -->
+<% } %>
 <!-- end section -->
 
 <%- include('partials/_footer') %>
