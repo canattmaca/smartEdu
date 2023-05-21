@@ -15,8 +15,22 @@
             name="contactform"
             method="post"
             action="/users/signup"
+            novalidate
           >
             <div class="row row-fluid">
+              <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
+                <% if (flashMessages) { %>
+                <!---->
+                <% if (flashMessages.success) { %>
+                <div class="alert alert-success">
+                  <%= flashMessages.success %>
+                </div>
+                <% } else if (flashMessages.error) { %>
+                <div class="alert alert-danger"><%= flashMessages.error %></div>
+                <% } %>
+                <!---->
+                <% } %>
+              </div>
               <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
                 <input
                   type="text"
@@ -50,8 +64,6 @@
               <div class="offset-1 col-lg-10 col-md-10 col-sm-10">
                 <button
                   type="submit"
-                  value="LOGIN"
-                  id="submit"
                   class="btn btn-light btn-radius btn-brd grd1 btn-block"
                 >
                   REGISTER

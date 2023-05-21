@@ -3787,6 +3787,10 @@ a.link-style3 {
 .widget-categories ul li a:hover{
 	color: #eea412;
 }
+.categories_active{
+    background-color: black;
+    color: #FFFFFF;
+}
 .widget-tags .widget-title{
 	font-size: 18px;
 	font-weight: 400;
